@@ -1,0 +1,41 @@
+2025-05-09 11:32:03,261 - __main__ - INFO - Model training started at: 2025-05-09 11:32:03.261870
+2025-05-09 11:32:03,289 - __main__ - INFO - Loading training data from C:\Users\kings\nigerian_edu_analytics\data\processed\train_data.csv
+2025-05-09 11:32:04,345 - __main__ - INFO - Training regression model...
+2025-05-09 11:39:03,291 - __main__ - INFO - Model training started at: 2025-05-09 11:39:03.291442
+2025-05-09 11:39:03,309 - __main__ - INFO - Loading training data from C:\Users\kings\nigerian_edu_analytics\data\processed\train_data.csv
+2025-05-09 11:39:03,896 - __main__ - INFO - Training regression model...
+2025-05-09 11:39:03,919 - __main__ - INFO - Categorical columns detected: ['School_Type', 'School_Location', 'Extra_Tutorials', 'Access_To_Learning_Materials', 'Parent_Involvement', 'IT_Knowledge', 'Gender', 'Socioeconomic_Status', 'Parent_Education_Level']
+2025-05-09 11:39:07,447 - __main__ - INFO - Training RMSE: 3.9514
+2025-05-09 11:39:07,502 - __main__ - INFO - Top 10 features by importance:
+2025-05-09 11:39:07,513 - __main__ - INFO -                  Feature  Importance
+30      Study_Efficiency    0.514603
+23  Study_Hours_Per_Week    0.469553
+31  School_Quality_Index    0.004814
+27            Student_ID    0.002370
+24       Attendance_Rate    0.001655
+25       Teacher_Quality    0.001533
+32      Engagement_Level    0.001052
+33      Distance_Barrier    0.000764
+26    Distance_To_School    0.000677
+28                   Age    0.000446
+2025-05-09 11:39:07,623 - __main__ - INFO - Model saved to C:\Users\kings\nigerian_edu_analytics\models\jamb_score_regressor.pkl
+2025-05-09 11:39:07,663 - __main__ - INFO - Feature importance saved to C:\Users\kings\nigerian_edu_analytics\models\feature_importance.csv
+2025-05-09 11:39:07,663 - __main__ - INFO - Training classification model...
+2025-05-09 11:39:36,520 - __main__ - INFO - Best parameters: {'classifier__max_depth': 15, 'classifier__min_samples_split': 5, 'classifier__n_estimators': 50}
+2025-05-09 11:39:36,565 - __main__ - INFO - Training accuracy: 0.9925
+2025-05-09 11:39:36,622 - __main__ - INFO - Classification report:
+              precision    recall  f1-score   support
+
+           0       0.99      1.00      0.99      2849
+           1       1.00      0.97      0.99      1151
+
+    accuracy                           0.99      4000
+   macro avg       0.99      0.99      0.99      4000
+weighted avg       0.99      0.99      0.99      4000
+
+2025-05-09 11:39:36,632 - __main__ - INFO - Model saved to C:\Users\kings\nigerian_edu_analytics\models\jamb_pass_classifier.pkl
+2025-05-09 11:39:36,632 - __main__ - INFO - Training XGBoost model...
+2025-05-09 11:39:37,495 - __main__ - INFO - XGBoost training RMSE: 1.3961
+2025-05-09 11:39:37,506 - __main__ - INFO - Model saved to C:\Users\kings\nigerian_edu_analytics\models\jamb_xgb_regressor.pkl
+2025-05-09 11:39:37,506 - __main__ - INFO - Model training completed at: 2025-05-09 11:39:37.506346
+2025-05-09 11:39:37,506 - __main__ - INFO - Total execution time: 0:00:34.214904

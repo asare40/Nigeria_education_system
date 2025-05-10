@@ -1,0 +1,28 @@
+2025-05-09 09:09:41,930 - __main__ - INFO - Data import started at: 2025-05-09 09:09:41.930705
+2025-05-09 09:09:41,931 - __main__ - INFO - Loading data from C:\Users\kings\nigerian_edu_analytics\data\raw\jamb_exam_results.csv
+2025-05-09 09:09:42,197 - __main__ - INFO - Loading data from C:\Users\kings\nigerian_edu_analytics\data\raw\education_nga.csv
+2025-05-09 09:09:42,245 - __main__ - INFO - JAMB dataset shape: (5000, 17)
+2025-05-09 09:09:42,274 - __main__ - INFO - Missing values in JAMB data:
+JAMB_Score                        0
+Study_Hours_Per_Week              0
+Attendance_Rate                   0
+Teacher_Quality                   0
+Distance_To_School                0
+School_Type                       0
+School_Location                   0
+Extra_Tutorials                   0
+Access_To_Learning_Materials      0
+Parent_Involvement                0
+IT_Knowledge                      0
+Student_ID                        0
+Age                               0
+Gender                            0
+Socioeconomic_Status              0
+Parent_Education_Level          891
+Assignments_Completed             0
+dtype: int64
+2025-05-09 09:09:42,311 - __main__ - INFO - Processed JAMB data saved to C:\Users\kings\nigerian_edu_analytics\data\processed\jamb_processed.csv
+2025-05-09 09:09:42,311 - __main__ - INFO - Education indicators shape: (9692, 6)
+2025-05-09 09:09:42,353 - __main__ - INFO - Processed education indicators saved to C:\Users\kings\nigerian_edu_analytics\data\processed\indicators_processed.csv
+2025-05-09 09:09:42,354 - __main__ - INFO - Data import completed at: 2025-05-09 09:09:42.354290
+2025-05-09 09:09:42,354 - __main__ - INFO - Total execution time: 0:00:00.423585

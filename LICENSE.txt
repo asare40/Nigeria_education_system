@@ -1,0 +1,31 @@
+Copyright (c) 2025 asare40. All rights reserved.
+
+Nigerian Educational Analytics Dashboard - Proprietary Software License
+
+This software and associated documentation files (the "Software") are the
+proprietary property of asare40 and are protected by copyright law and
+international treaties. Unauthorized reproduction, distribution, or use of
+this Software, or any portion of it, may result in severe civil and criminal
+penalties, and will be prosecuted to the maximum extent possible under the law.
+
+YOU MAY:
+- Use the Software as authorized by the license owner
+- Make backup copies for personal or internal business use only
+
+YOU MAY NOT:
+- Modify, adapt, alter, translate, or create derivative works from the Software
+- Reverse engineer, decompile, disassemble, or attempt to derive the source code
+- Remove or alter any proprietary notices, labels, or marks from the Software
+- Distribute, sublicense, lease, rent, loan, or transfer the Software to any third party
+- Use the Software for commercial purposes without specific authorization
+
+THE SOFTWARE IS PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS
+OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE, OR NON-INFRINGEMENT.
+
+IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
+DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
+ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
+DEALINGS IN THE SOFTWARE.
+
+For licensing inquiries, please contact: [your-email@example.com]

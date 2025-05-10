@@ -1,0 +1,224 @@
+/* Resource Library Styling */
+.resource-section {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    padding: 25px;
+    margin-bottom: 25px;
+}
+
+.resources-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 25px;
+}
+
+.resource-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.05);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-left: 5px solid #2563eb;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    min-height: 220px;
+}
+
+.resource-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.resource-card.book {
+    border-left-color: #2563eb;
+}
+
+.resource-card.video {
+    border-left-color: #e11d48;
+}
+
+.resource-card.practice {
+    border-left-color: #16a34a;
+}
+
+.resource-card.course {
+    border-left-color: #9333ea;
+}
+
+.resource-card.official {
+    border-left-color: #f59e0b;
+}
+
+.resource-card.notes {
+    border-left-color: #0891b2;
+}
+
+.resource-icon {
+    font-size: 1.8rem;
+    margin-right: 10px;
+}
+
+.resource-card h4 {
+    margin: 0;
+    color: #1a3b66;
+    font-size: 1.2rem;
+    font-weight: 600;
+    flex: 1;
+}
+
+.resource-description {
+    margin: 10px 0;
+    color: #64748b;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.resource-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 15px 0;
+    font-size: 0.85rem;
+    color: #64748b;
+}
+
+.resource-source {
+    font-weight: 500;
+}
+
+.resource-rating {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.rating-stars {
+    color: #f59e0b;
+    letter-spacing: -1px;
+}
+
+.resource-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.access-btn, .save-btn {
+    padding: 8px 15px;
+    border-radius: 6px;
+    font-weight: 500;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.access-btn {
+    background-color: #2563eb;
+    color: white;
+    text-decoration: none;
+    flex: 1;
+    text-align: center;
+    margin-right: 10px;
+}
+
+.access-btn:hover {
+    background-color: #1d4ed8;
+}
+
+.save-btn {
+    background-color: transparent;
+    border: 1px solid #2563eb;
+    color: #2563eb;
+}
+
+.save-btn:hover {
+    background-color: #eef2ff;
+}
+
+/* Saved Resources Styling */
+.saved-resources {
+    margin-top: 15px;
+}
+
+.saved-resource-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: #f8fafc;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    transition: background-color 0.2s ease;
+}
+
+.saved-resource-item:hover {
+    background-color: #f0f7ff;
+}
+
+.saved-resource-item h5 {
+    margin: 0 0 5px 0;
+    color: #1a3b66;
+    font-weight: 600;
+}
+
+.saved-resource-item p {
+    margin: 5px 0;
+    color: #64748b;
+    font-size: 0.9rem;
+}
+
+.view-saved-btn {
+    background-color: #2563eb;
+    color: white;
+    padding: 6px 15px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: background-color 0.2s ease;
+}
+
+.view-saved-btn:hover {
+    background-color: #1d4ed8;
+}
+
+/* Filter styling */
+.Select-control {
+    border-color: #e2e8f0;
+    box-shadow: none;
+}
+
+.Select-control:hover {
+    border-color: #cbd5e1;
+}
+
+.Select-value-label {
+    color: #1a3b66 !important;
+}
+
+/* Loading spinner */
+._dash-loading {
+    margin: 50px auto;
+    text-align: center;
+    color: #2563eb;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .resources-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .resource-actions {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .access-btn {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+}

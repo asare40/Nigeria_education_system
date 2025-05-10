@@ -1,0 +1,16 @@
+2025-05-09 09:11:16,228 - __main__ - INFO - Data preprocessing started at: 2025-05-09 09:11:16.227897
+2025-05-09 09:11:16,228 - __main__ - INFO - Loading processed data from C:\Users\kings\nigerian_edu_analytics\data\processed\jamb_processed.csv
+2025-05-09 09:11:16,257 - __main__ - INFO - Engineering additional features...
+2025-05-09 09:11:16,388 - __main__ - INFO - Enhanced JAMB data saved to C:\Users\kings\nigerian_edu_analytics\data\processed\jamb_enhanced.csv
+2025-05-09 09:11:16,550 - __main__ - INFO - Training data saved to C:\Users\kings\nigerian_edu_analytics\data\processed\train_data.csv
+2025-05-09 09:11:16,550 - __main__ - INFO - Testing data saved to C:\Users\kings\nigerian_edu_analytics\data\processed\test_data.csv
+2025-05-09 09:11:16,551 - __main__ - INFO - Data preprocessing completed at: 2025-05-09 09:11:16.551185
+2025-05-09 09:11:16,551 - __main__ - INFO - Total execution time: 0:00:00.323288
+2025-05-09 10:46:34,466 - __main__ - INFO - Data preprocessing started at: 2025-05-09 10:46:34.466248
+2025-05-09 10:46:34,493 - __main__ - INFO - Loading processed data from C:\Users\kings\nigerian_edu_analytics\data\processed\jamb_processed.csv
+2025-05-09 10:46:34,807 - __main__ - INFO - Engineering additional features...
+2025-05-09 10:46:35,336 - __main__ - INFO - Enhanced JAMB data saved to C:\Users\kings\nigerian_edu_analytics\data\processed\jamb_enhanced.csv
+2025-05-09 10:46:36,974 - __main__ - INFO - Training data saved to C:\Users\kings\nigerian_edu_analytics\data\processed\train_data.csv
+2025-05-09 10:46:36,975 - __main__ - INFO - Testing data saved to C:\Users\kings\nigerian_edu_analytics\data\processed\test_data.csv
+2025-05-09 10:46:36,975 - __main__ - INFO - Data preprocessing completed at: 2025-05-09 10:46:36.975288
+2025-05-09 10:46:36,975 - __main__ - INFO - Total execution time: 0:00:02.509040

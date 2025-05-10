@@ -1,0 +1,259 @@
+Nigerian Educational Analytics Dashboard - Project Structure
+Directory Structure
+
+Prediction_model/ ├── config.py # Configuration settings (paths, constants) ├── README.md # Project documentation ├── requirements.txt # Python dependencies ├── dashboard/ # Dashboard application │ ├── app.py # Main application file │ ├── assets/ # Static assets │ │ ├── style.css # Main stylesheet │ │ ├── resources.css # Digital library styles │ │ ├── resources.py # Digital library component │ │ ├── documentation.html # Documentation page │ │ └── favicon.ico # Website icon ├── data/ # Data directory │ ├── raw/ # Original datasets │ │ └── jamb_data.csv # Raw JAMB scores data │ └── processed/ # Processed data files │ └── jamb_enhanced.csv # Enhanced dataset with features ├── models/ # Trained models │ ├── jamb_score_regressor.pkl # Score prediction model │ ├── jamb_pass_classifier.pkl # Pass/fail classification model │ └── jamb_xgb_regressor.pkl # XGBoost regression model ├── notebooks/ # Jupyter notebooks │ ├── EDA.ipynb # Exploratory data analysis │ ├── feature_engineering.ipynb # Feature creation notebook │ └── model_training.ipynb # Model training notebook ├── scripts/ # Utility scripts │ ├── data_preprocessing.py # Data preparation script │ ├── model_training.py # Model training script │ └── utils.py # Helper functions └── tests/ # Unit and integration tests ├── test_models.py # Tests for prediction models └── test_preprocessing.py # Tests for data preprocessing
+
+
+## Component Description
+
+### 1. Dashboard Components
+The dashboard consists of five main tabs:
+
+#### Overview Tab
+- Displays key performance metrics
+- Shows statistics like average score, pass rate, etc.
+- Features interactive cards with icons
+
+#### Performance Analysis Tab
+- **Score Distribution**: Histogram of JAMB scores with pass threshold marker
+- **Factor Analysis**: Interactive exploration of relationships between factors and scores
+  - Includes detailed insights for each factor
+- **Correlation Matrix**: Heatmap showing relationships between variables
+
+#### Score Prediction Tab
+- Input form with multiple factors organized into sections:
+  - Academic factors
+  - Environmental factors
+  - Additional factors
+- Prediction results showing:
+  - Predicted score
+  - Pass probability
+  - Risk assessment
+- Personalized recommendations based on inputs
+
+#### Digital Library Tab
+- Resource filtering by subject, topic, and type
+- Resource display in a card format
+- Personal saving feature
+- Integration with open educational resources:
+  - OpenStax
+  - Khan Academy
+  - LibreTexts
+  - YouTube EDU
+  - JAMB eLearning
+
+#### Documentation Tab
+- Project overview
+- Feature descriptions
+- User guides
+- Technical information
+
+### 2. Prediction Models
+
+- **JAMB Score Regressor**: Linear regression model predicting numerical score
+- **JAMB Pass Classifier**: Classification model predicting pass/fail probability
+- **JAMB XGBoost Regressor**: Advanced gradient boosting model for score prediction
+
+### 3. Data Pipeline
+
+The data pipeline follows this flow:
+1. Raw data collection (from JAMB sources)
+2. Data preprocessing (cleaning, normalization)
+3. Feature engineering (creating derived features)
+4. Model training and evaluation
+5. Model export to dashboard
+
+### 4. Digital Library Implementation
+
+The digital library module:
+1. Provides access to educational resources from free, open sources
+2. Allows filtering by subject and topic
+3. Categorizes resources by type (books, videos, practice materials)
+4. Implements caching for performance optimization
+5. Allows users to save resources for later reference
+
+## Data Flow Diagram
+
+Raw Data → Preprocessing → Feature Engineering → Model Training → Dashboard ↓ User → Dashboard Interface → Prediction Model → Results ↑ ↓ └── Digital Library Resources
+
+
+## Technology Stack
+
+- **Frontend**: Dash by Plotly with custom CSS
+- **Backend**: Python Flask (via Dash)
+- **Data Processing**: Pandas, NumPy
+- **Data Visualization**: Plotly, Plotly Express
+- **Machine Learning**: Scikit-learn, XGBoost
+- **Resource Integration**: Custom API interfaces to educational repositories
+- **Documentation**: HTML, Markdown
+
+## Development and Deployment
+
+### Running Locally
+1. Clone the repository
+2. Install requirements: `pip install -r requirements.txt`
+3. Run the application: `python dashboard/app.py`
+4. Access at http://localhost:8050
+
+### Deployment Options
+- Local server
+- Cloud platforms (Heroku, Render, AWS, etc.)
+- Docker containerization
+
+## Future Enhancements
+
+1. **User Authentication**
+   - Personalized dashboards
+   - Progress tracking
+   - Custom recommendation history
+
+2. **Enhanced Digital Library**
+   - More resource integrations
+   - Resource ratings and reviews
+   - Content recommendation engine
+
+3. **Advanced Analytics**
+   - Geo-spatial analysis of performance trends
+   - Time-series analysis of historical data
+   - Multi-factor analysis dashboard
+
+4. **Mobile Compatibility**
+   - Progressive Web App (PWA) functionality
+   - Offline mode for limited connectivity areas
+Let's create a concise documentation for the digital library feature:
+
+
+digital_library_documentation.md
+# Digital Library Feature Documentation
+
+## Overview
+
+The Digital Library feature integrates free open educational resources for JAMB preparation into the Nigerian Educational Analytics Dashboard. It allows users to discover, filter, and save learning materials across multiple subjects in the JAMB curriculum.
+
+
+README.md
+
+# Nigerian Educational Analytics Dashboard
+
+![Dashboard Version](https://img.shields.io/badge/version-1.2.0-blue)
+![Python Version](https://img.shields.io/badge/python-3.7+-green)
+![License](https://img.shields.io/badge/license-MIT-orange)
+
+Create and activate a virtual environment
+
+
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+Install required packages
+
+pip install -r requirements.txt
+Run the application
+
+
+python dashboard/app.py
+Access the dashboard Open your browser and navigate to:
+
+
+http://localhost:8050
+Project Structure
+The project is organized as follows:
+
+
+Prediction_model/
+├── dashboard/           # Dashboard application
+│   ├── app.py           # Main application
+│   └── assets/          # Static assets and components
+├── data/                # Data files
+├── models/              # Trained ML models
+├── notebooks/           # Development notebooks
+└── scripts/             # Utility scripts
+
+See project_structure.md for a detailed breakdown.
+
+Digital Library
+The dashboard includes a digital library that provides access to free educational resources for JAMB preparation, including:
+
+Textbooks and study guides
+Video tutorials
+Practice questions
+Official JAMB materials
+Subject-specific resources
+Resources are organized by subject and topic, with filtering capabilities and a personal saving feature. For more information, see digital_library_documentation.md.
+
+Dashboard Sections
+1. Overview
+Quick statistics on student performance metrics:
+
+Average JAMB score
+Pass rate
+Top performers percentage
+2. Performance Analysis
+Interactive visualizations to explore:
+
+Score distributions
+Factor analysis (study hours, teacher quality, etc.)
+Correlation matrix of key factors
+Each analysis includes contextual insights to help understand the data.
+
+3. Score Prediction
+Predict JAMB scores based on:
+
+Academic factors (study hours, attendance, etc.)
+Environmental factors (school type, distance to school, etc.)
+Additional factors (parental involvement, IT knowledge)
+Receive a predicted score, pass probability, and personalized recommendations.
+
+4. Digital Library
+Access educational resources:
+
+Filter by subject, topic, and resource type
+View details about each resource
+Access external learning materials
+Save resources for future reference
+5. Documentation
+Comprehensive guides and documentation about:
+
+Project overview
+Using the dashboard
+Interpretation of results
+Technical implementation
+Technologies Used
+Dash by Plotly: Interactive web application framework
+Pandas & NumPy: Data processing and analysis
+Plotly: Data visualization
+Scikit-learn & XGBoost: Machine learning models
+Flask: Web server (underlying Dash)
+Contributing
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+Fork the repository
+Create your feature branch (git checkout -b feature/amazing-feature)
+Commit your changes (git commit -m 'Add some amazing feature')
+Push to the branch (git push origin feature/amazing-feature)
+Open a Pull Request
+License
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+Acknowledgments
+JAMB for educational guidelines and curriculum
+Open educational resources providers
+All contributors to the project
+Contact
+Project maintained by asare40
+
+
+This completes the implementation of your Nigerian Educational Analytics Dashboard with the new Digital Library feature for accessing free educational resources. The dashboard now includes:
+
+1. Enhanced styling with brighter colors and icons
+2. Pop-up insights cards for the performance analysis charts
+3. A comprehensive Digital Library that pulls books and lesson videos from free open sources related to the JAMB curriculum
+4. Complete project structure documentation
+
+The digital library component includes:
+- Subject and topic filtering
+- Resource type filtering (books, videos, etc.)
+- Resource cards with descriptions and ratings
+- Links to various free educational platforms
+- A saving feature for personal resource collections
+
+Users can now access educational materials directly from the dashboard, making it a more comprehensive tool for JAMB preparation.

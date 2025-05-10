@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Nigerian Educational Analytics Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f0f7ff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        
+        .login-container {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+            width: 400px;
+            padding: 30px;
+            text-align: center;
+        }
+        
+        h2 {
+            color: #1a3b66;
+            margin-bottom: 30px;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #475569;
+            font-weight: 500;
+        }
+        
+        input[type="text"], input[type="password"] {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #e2e8f0;
+            border-radius: 6px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+        
+        input[type="text"]:focus, input[type="password"]:focus {
+            outline: none;
+            border-color: #2563eb;
+            box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.1);
+        }
+        
+        .btn {
+            background-color: #2563eb;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            padding: 12px 24px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            width: 100%;
+            transition: all 0.3s ease;
+        }
+        
+        .btn:hover {
+            background-color: #1d4ed8;
+        }
+        
+        .error {
+            background-color: #fee2e2;
+            color: #ef4444;
+            padding: 10px;
+            border-radius: 6px;
+            margin-bottom: 20px;
+        }
+        
+        .logo {
+            margin-bottom: 20px;
+        }
+        
+        .logo img {
+            width: 80px;
+            height: auto;
+        }
+        
+        .security-notice {
+            font-size: 12px;
+            color: #64748b;
+            margin-top: 20px;
+        }
+        
+        .credentials-hint {
+            background-color: #f0f7ff;
+            border-left: 4px solid #2563eb;
+            padding: 10px;
+            margin-top: 20px;
+            text-align: left;
+            border-radius: 4px;
+        }
+        
+        .credentials-hint p {
+            margin: 5px 0;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <div class="logo">
+            <!-- Replace with your actual logo -->
+            <svg width="80" height="80" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="100" height="100" rx="20" fill="#1C4E80"/>
+                <path d="M30 70V30H70V70H30Z" stroke="white" stroke-width="4"/>
+                <path d="M40 50H60" stroke="white" stroke-width="4"/>
+                <path d="M50 40V60" stroke="white" stroke-width="4"/>
+                <path d="M35 80L65 80" stroke="white" stroke-width="4"/>
+            </svg>
+        </div>
+        
+        <h2>Nigerian Educational Analytics Dashboard</h2>
+        
+        {% if error %}
+        <div class="error">
+            {{ error }}
+        </div>
+        {% endif %}
+        
+        <form method="POST" action="/login">
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" placeholder="viewer" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Viewer" required>
+            </div>
+            
+            <button type="submit" class="btn">Login</button>
+        </form>
+        
+        <div class="credentials-hint">
+            <p><strong>Viewer Access:</strong></p>
+            <p>Username: viewer</p>
+            <p>Password: Viewer</p>
+        </div>
+        
+        <div class="security-notice">
+            <p>This system is protected by security monitoring. Unauthorized access attempts will be logged and reported.</p>
+            <p>© 2025 Nigerian Educational Analytics Project</p>
+        </div>
+    </div>
+    
+    <script>
+        // Simple anti-automation protection
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add a hidden honeytoken field
+            const form = document.querySelector('form');
+            const honeytoken = document.createElement('input');
+            honeytoken.type = 'hidden';
+            honeytoken.name = 'human_check';
+            honeytoken.value = 'true';
+            form.appendChild(honeytoken);
+            
+            // Check if the user is using automation
+            const isHuman = 'ontouchstart' in document.documentElement || 
+                            navigator.maxTouchPoints > 0 ||
+                            navigator.msMaxTouchPoints > 0;
+                            
+            if (!isHuman) {
+                // Additional verification might be required
+                console.log('Possible automation detected');
+            }
+        });
+    </script>
+</body>
+</html>
